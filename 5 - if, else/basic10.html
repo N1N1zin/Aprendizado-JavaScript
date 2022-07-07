@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consulta de velocidades</h1>
+    Velocidade do carro: <input type="number" name="velocity" id="velocity">Km/h 
+    <input type="button" value="Verificar" id="botão" onclick="verificar()"> <hr>
+    <p id="resultado"></p>
+    <p id="cinto"></p>
+    <script>
+        function verificar(){
+            var speed = document.querySelector('input#velocity').value;
+            var aviso = document.querySelector('p#resultado') 
+            var cinto = document.querySelector('p#cinto')
+            if(speed > 80){
+                aviso.innerHTML = `${speed}Km/h ultrapassa o limite de velocidade de 80Km/h, você pode ser multado.`
+            }else{
+                aviso.innerHTML = `${speed}Km/h está abaixo do limite de velocidade. Pode contiuar desde que não ultrapasse 80Km/h.`
+            }
+            cinto.innerHtml = 'Usar o cinto é obrigação!'
+        }
+    </script>
+</body>
+</html>

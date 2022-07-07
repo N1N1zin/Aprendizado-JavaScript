@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            color: greenyellow;
+            background-color: black;
+        }
+        h1 {
+            text-align: center;
+            font-style: normal 20px;
+        }
+    </style>
+</head>    
+<body>
+    <h1>Verificação se Brasileiro</h1> <br>
+    De que país você é? <input type="text" id="caixa"> 
+    <input type="button" value="Verificar" id="xesque" onclick="verificação()"><hr>
+    <p id="resultado"></p>
+    <script>
+        var box1 = document.querySelector('input#caixa').value;
+        var resulta = document.querySelector('p#resultado');
+        var Brasil = 'Brasil'
+        
+        function verificação(){
+            if(box1 == Brasil){
+                resulta.innerHTML = 'Brasileiro';
+            }else{
+                resulta.innerHTML = 'Estrangeiro';
+            }
+        }
+    </script>
+</body>
+</html>
